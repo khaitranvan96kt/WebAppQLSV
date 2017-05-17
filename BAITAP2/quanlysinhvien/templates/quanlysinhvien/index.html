@@ -1,0 +1,70 @@
+<!DOCTYPE html>{%load staticfiles%}
+<html lang="en">
+
+<head>
+    <title>Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{% static 'quanlysinhvien/css/styles.css'%}" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <style>
+        .item {
+            background: #333;
+        }
+    </style>
+</head>
+<nav class="nav">
+    <a href="http://127.0.0.1:8000/home/" class="item">Home</a>
+    <a href="http://127.0.0.1:8000/home/showlist/" class="item">ShowList</a>
+    <a href="http://127.0.0.1:8000/home/register/" class="item">Register</a>
+    <a href="#contact" class="item">Contact</a>
+</nav>
+
+<body>
+
+    <!-- Slide Show -->
+    <section>
+        <img class="mySlides" src="{%static 'quanlysinhvien/1.jpg'%}">
+        <img class="mySlides" src="{%static 'quanlysinhvien/2.jpg'%}">
+        <img class="mySlides" src="{%static 'quanlysinhvien/3.jpg'%}">
+        <img class="mySlides" src="{%static 'quanlysinhvien/4.jpg'%}">
+    </section>
+    <!-- Band Description -->
+    <section class="content">
+        <h2 class="header">ĐỒNG QUÊ</h2>
+        <p class="main"><i>We love music</i></p>
+        <p class="main">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </section>
+
+    <!-- Band Members -->
+    <div class="wrapper">
+        <article class="w3-third">
+            <p>John</p>
+            <img src="{%static 'quanlysinhvien/5.jpg'%}" alt="Random Name">
+            <p>John is the smartest.</p>
+        </article>
+        <article class="w3-third">
+            <p>Paul</p>
+            <img src="{%static 'quanlysinhvien/5.jpg'%}" alt="Random Name">
+            <p>Paul is the prettiest.</p>
+        </article>
+        <article class="w3-third">
+            <p>Ringo</p>
+            <img src="{%static 'quanlysinhvien/5.jpg'%}" alt="Random Name">
+            <p>Ringo is the funniest.</p>
+        </article>
+    </div>
+    <script src="{%static 'quanlysinhvien/js/controlslider.js'%}"></script>
+</body>
+
+</html>

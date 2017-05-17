@@ -1,0 +1,45 @@
+<!DOCTYPE html>{%load staticfiles%}
+<html lang="en">
+
+<head>
+    <title>ShowList</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{% static 'quanlysinhvien/css/stylesShowList.css'%}" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="{%static 'quanlysinhvien/js/controlshowlist.js'%}">
+    </script>
+</head>
+
+<body>
+    {%if all_sv%} {% comment %}
+    <h1>{{all_sv|length}}</h1>{% endcomment %}
+    <table class="table table-hover">
+        <tr>
+            <th> Họ Tên </th>
+            <th> Mã Sinh Viên</th>
+            <th>Chuyên Ngành </th>
+            <th>Funtion</th>
+        </tr>
+        {%for sv in all_sv%}
+        <tr class="{{sv.masv}}">
+            {% block content %} {% csrf_token %}
+            <td> {{sv.hoten}}</td>
+            <td>{{sv.masv}}</td>
+            <td>{{sv.nganhhoc}}</td>
+            <td>
+                <input type="button" name="delete" value="Delete" class="delete" data-id="{{sv.masv}}"> </input>
+            </td>
+            {% endblock %}
+            </td>
+        </tr>
+        {%endfor%}
+    </table>
+    {%endif%}
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="submit" name="submit" value="tositeADD"> </input>
+    </form>
+</body>
+
+</html>

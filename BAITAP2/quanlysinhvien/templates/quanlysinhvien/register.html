@@ -1,0 +1,50 @@
+<!DOCTYPE html> {%load staticfiles%}
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'QuanLySinhVien/css/stylesregister.css' %}">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <form action="" method="post">
+        {%csrf_token%} {% comment %}
+        <table>
+            {{form.as_table}}
+        </table>{% endcomment %}
+        <div class="form-group row">
+            <label for="hoten" class="col-2 col-form-label">Họ Tên</label>
+            <div class="col-5">
+                <input class="form-control" type="text" name="hoten" placeholder="Họ Tên" id="hoten">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="example-text-input" class="col-2 col-form-label">Mã Sinh Viên</label>
+            <div class="col-5">
+                <input class="form-control" type="text" name="masv" placeholder="Mã Sinh Viên" id="example-text-input">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="example-text-input" class="col-2 col-form-label">Ngành Học</label>
+            <div class="col-5">
+                <input class="form-control" type="text" name="nganhhoc" placeholder="Ngành Học" id="example-text-input">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="offset-sm-2 col-sm-10">
+                <input type="submit" class="btn btn-primary" id="button" name="submit" value="Submit"></input>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
